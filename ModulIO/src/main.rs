@@ -2,7 +2,9 @@ extern crate ModulIO;
 use std::env;
 use std::process;
 
-use ModulIO::Config;
+use ModulIO::logic::Config;
+use ModulIO::logic;
+
 fn main(){
     let args : Vec<String> = env::args().collect();
 
@@ -14,12 +16,11 @@ fn main(){
     println!("Searching for {}", config.query);
     println!("In file {}", config.filename);
 
-    if let Err(e) = ModulIO::run(&config) {
+    if let Err(e) = logic::run(&config) {
         println!("Application error: {}", e);
 
         process::exit(1);
     }
-
 
 
 }
