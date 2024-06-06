@@ -76,3 +76,11 @@ pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
 
     results
 }
+
+// 아래처럼 구현하면 result의 변경가능한 그런 타임을 막을 수 있음
+// 이는 병렬 프로그래밍 등의 이점을 가질 수 있다 
+pub fn new_search<'a>(query: &str, contents: &'a str) -> Vec<&'a str>{
+    contents.lines()
+        .filter(|line| line.contains(query))
+        .collect()
+}

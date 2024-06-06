@@ -49,6 +49,8 @@ struct Config<'a> {
 참조가 아니라 아예 데이터를 복사하는 (깊은복사) clone을 쓴다 
 */
 #[derive(Debug)]
+
+/* */
 struct Config{
     query: String,
     filename: String
