@@ -19,9 +19,9 @@ fn main(){
 
     println!("New Kal! {}", k.summary());
 }
-
 fn some_function<T, U>(t: T, u: U) -> i32
     where T: Display + Clone,
           U: Clone + Debug
 {
-} // 트레잇 바운드, Display와 Clone이 구현되어있는 타입만 통과시킨다. 아니면 컴파일이 불가능함 
+} // 트레잇 바운드, Display와 Clone이 구현되어있는 타입만 통과시킨다. 아니면 컴파일이 불가능함
+ 
