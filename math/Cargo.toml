@@ -1,0 +1,8 @@
+[package]
+name = "math"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+prime-factor = "0.5.1"
+prime_factorization = "1.0.4"
